@@ -1,0 +1,309 @@
+/* When someone enters your game, you only want them to see the opening and the option buttons. The code below will use the display property to hide certain parts of the story. Remove the comments from the code below when you're ready for that step!*/
+
+.buttons,
+.option-one-screen, 
+.option-two-screen, 
+.option-one-end, 
+.option-two-end,
+.option-one-cont,
+.option-three-end,
+.option-four-cont,
+.option-five-end,
+.option-six-end {
+   display:none;
+}
+
+
+
+/* Feel free to change any of the styling below!*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+/* Style the body with a background color or image if desired */
+@font-face {
+    font-family: hello-ghost;
+    src: url(/Users/maramalashi/Downloads/return-of-ganon/retganon.ttf)
+}
+@font-face {
+    font-family: pixel;
+    src: url(/Users/maramalashi/Downloads/disposabledroid-bb/DisposableDroidBB.ttf)
+}
+
+body {
+    font-family: hello-ghost;
+    color: #dcdcef;
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #817f9a, 0 0 20px #817f9a, 0 0 30px #6c7fc4, 0 0 40px #6c7fc4, 0 0 50px #6c7fc4, 0 0 60px #6c7fc4, 0 0 70px #6c7fc4;
+    }
+    to {
+      text-shadow: 0 0 20px #817f9a, 0 0 30px #817f9a, 0 0 40px #4d67c7, 0 0 50px #4d67c7, 0 0 60px #4d67c7, 0 0 70px #4d67c7, 0 0 80px #4d67c7;
+    }
+  }
+/* Style the title of your story */
+.title {
+    font-size: 300px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style the story opening container */
+.story-opening {
+    background-color: #000000;
+    background-image: url(https://i.redd.it/xuffj01n5stb1.gif);
+    background-size: cover;
+    border: 1px solid #ccc;
+    padding: 200px 100px;
+    margin: 100px
+   
+}
+
+/* Style the story image */
+.story-opening img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Style the story opening message */
+.story-opening h1 {
+    font-size: 150px;
+    margin-bottom: 20px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Style the buttons container */
+/*.buttons {
+    margin: 20px;
+}
+
+/* Style the option buttons */
+
+button {
+    font-size: 25px;
+    padding: 10px 15px 8px;
+    margin: 10px;
+    background-color: #dcdcef;
+    color: #35353c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: pixel;
+    text-align: center;
+}
+button:active {
+background-color: #ccc;
+box-shadow: #4b00b3;
+transform: translateY(4px)
+}
+
+button:hover {
+    background-color: #adadcd
+}
+.option-one-screen {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8fb2b66a-3dd3-482f-9846-9026c7c03f13/df1zsvb-b26e704f-53e7-4a43-a0ee-63cdfaa7ed4e.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhmYjJiNjZhLTNkZDMtNDgyZi05ODQ2LTkwMjZjN2MwM2YxM1wvZGYxenN2Yi1iMjZlNzA0Zi01M2U3LTRhNDMtYTBlZS02M2NkZmFhN2VkNGUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.RyDeL5__6LoNr4dRaz2uVrRkNmwtDNMCZgvedXY8T0A);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 250px 200px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 100px;
+}
+.option-two-screen {
+    background-image: url(https://gifdb.com/images/high/chill-animated-rainy-room-night-c9o0p5ga5bjqkj1g.gif);
+    background-size: cover;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 200px 200px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 100px;
+   
+}
+.option-one-end{
+    background-image: url(https://49.media.tumblr.com/14d495ae09fb008a6819d7f49775e45b/tumblr_o2hqedfT8X1uqrdeoo1_1280.gif);
+    background-size: cover;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 250px 200px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 100px;
+}
+/* Style the screens for option one and option two */
+
+.option-two-end {
+    background-image: url(https://miro.medium.com/v2/resize:fit:1000/0*DiCP0QUvRep4QT0O.gif);
+    background-size: cover;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 250px 200px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 100px;
+}
+.option-one-cont {
+    background-image: url(https://img.itch.zone/aW1nLzQ0MjQ0NTIuZ2lm/original/BO6duF.gif);
+    background-size: cover;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 250px 200px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 100px;
+    
+}
+
+.option-three-end {
+    background-image: url(https://i.pinimg.com/originals/37/4a/9c/374a9ce6182b7a8aafd8c6ea6b698ff3.gif);
+    background-size: cover;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 250px 200px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 100px;
+}
+
+.option-four-cont {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b4f1125b-353d-4993-8b7b-5c1aafc2ecd9/deo17m2-158b4210-4c0f-4797-b3a5-87fb38c03120.png/v1/fill/w_1192,h_670,q_70,strp/_c__night_forest_by_forheksed_deo17m2-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYjRmMTEyNWItMzUzZC00OTkzLThiN2ItNWMxYWFmYzJlY2Q5XC9kZW8xN20yLTE1OGI0MjEwLTRjMGYtNDc5Ny1iM2E1LTg3ZmIzOGMwMzEyMC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.pqGf2TCDKv4s8fPLFS2TnJvJbtQqMUSY1Ety-epJpIU);
+    background-size: cover;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 150px 200px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 100px;
+}
+.option-four-cont:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.option-five-end {
+    background-image: url(https://64.media.tumblr.com/83116657fc6c462ac6e9f793665bcb7f/tumblr_oclq7ohpuI1umof4oo1_640.gif);
+    background-size: cover;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 250px 200px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 100px;
+}
+
+.option-six-end {
+    background-image: url(https://i.pinimg.com/originals/f5/bb/fa/f5bbfaf72ab0587d6408748418d948bb.gif);
+    background-size: cover;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 300px 250px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 100px;
+}
+/* Style the images in the screens */
+.option-one-screen img,
+.option-two-screen img,
+.option-one-end img,
+.option-two-end img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Style the text in the screens */
+.option-one-screen h1,
+.option-six-end h1,
+.option-three-end h1,
+.option-four-cont h1,
+.option-five-end h1,
+.option-six-end h1,
+.option-one-cont h1,
+.option-two-screen h1,
+.option-one-end h1,
+.option-two-end h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    background-color: white;
+    width: 85%;
+    border: 2px solid rgb(58, 27, 76);
+    border-radius: 6px;
+    padding: 20px;
+    margin: 4px;
+    color:#63637c;
+    position: relative;
+    bottom: -8px;
+    font-size: 18pt;
+    display: inline-block;
+}
+
+.characters {
+    width:40%;
+    display:block;
+    left: 40%;
+    animation: walk 1s steps(12) infinite, forward 5s linear infinite;
+}
+
+@keyframes walk {
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: 3000px;
+    }
+}
+
+@keyframes forward{
+    0% {
+        transform:translateX(-100px);
+    }
+    100%{
+        transform:translateX(1200px);
+    }
+}
+
+
+.ringingphone {
+    width:27% ;
+    display: flex;
+    position: relative;
+    bottom: 310px;
+    left: 80%
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+/*@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+.intro-text {
+    overflow: hidden;
+    white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards;
+  font-size: 1.6rem;
+  width: 0;
+}
+

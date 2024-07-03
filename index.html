@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unit 3 Project Starter Code</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    
+    <body>
+
+        <!-- Add a title and edit the opening of your story. -->
+        
+            <div class="story-opening">
+                <h1>Graveyard Shift</h1>
+                <button class="startbutton">START GAME</button>
+                <button class="settingsbutton">SETTINGS</button>
+                <button class="mainmenubutton">MAIN MENU</button>
+            </div>
+    
+    
+
+        <!-- Change the text of the buttons to the options relevant to your story. -->
+       <!--<div class="buttons">
+            <button class="option-one">ANSWER THE PHONE</button>
+            <button class="option-two">DONT ANSWER THE PHONE</button>
+        </div>-->
+
+        <!-- Put the part of the story the user will see if they picked option one. -->
+        <div class="option-one-screen">
+     <div class="intro-text-container">
+           <div class="intro-text"><h1>You are in need of some extra cash so you look for an extra gig after your full time job. You come across an ad 
+                for the night shift at the graveyard right next to your house. You decide to take the job. On your first night working,
+                you get to what looks like the building for the staff.
+            </h1>
+            </div>
+        </div>
+            <button class="walkinbutton">WALK IN</button>
+        </div>
+
+        <!-- Put the part of the story the user will see if they picked option two. -->
+        <div class="option-two-screen">
+            <h1>When you walk in, you are surprised to find no one there. When suddenly, you get a phone call. </h1>
+            <div class="buttons"></div>
+             <button class="option-one">ANSWER THE PHONE</button>
+           <button class="option-two">DONT ANSWER THE PHONE</button>
+           <img class="ringingphone" src="/Users/maramalashi/Downloads/Untitled design.gif">
+           </div>
+        </div>
+
+        <!--Put the end of the story if the user chose option 1.-->
+        <div class="option-one-end">
+            <h1>You answer the call. "Hello..." It's your boss. He tells you your job is to
+                watch the security cameras and patrol the graveyard every hour. </h1>
+                <button class="continuebutton">CONTINUE</button>
+        </div>
+
+        <!-- Put the end of the story if the user chose option 2.-->
+        <div class="option-two-end">
+            <h1>Oops. It was your boss. He thought you didn't show up for your shift so he fired you.</h1>
+            <button class="gameoverbutton">TRY AGAIN</button>
+        </div>
+
+         <!--If User chose Option 1 and Goes on Patrol-->
+         <div class="option-one-cont">
+            <h1>After an hour, you leave for your first patrol. It's a cool foggy night which sends 
+                shivers down your spine. Suddenly, you hear a scream. Do you?...
+            </h1>
+            <div class="buttons"></div>
+             <button class="option-three">GO BACK AND CHECK CAMERAS</button>
+           <button class="option-four">HEAD TOWARDS THAT NOISE</button>
+           </div>
+        
+         <!--If User chose Option 3 and Watches Cameras-->
+           <div class="option-three-end">
+            <h1>You check the cameras to find nobody there. You're too scared
+                to leave the building again so you stay inside the rest of your shift. Your 
+                boss fires you because you did not patrol. Womp, Womp.
+            </h1>
+            <button class="gameoverbuttontwo">TRY AGAIN</button>
+        </div>
+
+         <!--If User chose Option 4 and Head Towards The Noise-->
+        <div class="option-four-cont">
+            <h1>You walk towards the place you heard the scream to find a little girl. The girl
+                runs away from you. Do you?..
+            </h1>
+            <div class="buttons"></div>
+             <button class="option-five">FOLLOW HER</button>
+           <button class="option-six">GO BACK</button>
+           <img class="characters" src="/Users/maramalashi/Downloads/download (1).png" style="object-fit: contain;">
+           </div>
+
+            <!--If User chose Option 5 and Follows Her-->
+           <div class="option-five-end">
+            <h1>You follow her and suddenly fall inside an open grave and hit your head, making you
+                go to sleep. The next morning, one of the other grave workers finds you and 
+                thinks that they forgot to close your grave so they bury you alive. Womp, womp. No one 
+                knows what became of the graveyard shift employee.
+            </h1>
+            <button class="game-over-button-three">GAME OVER</button>
+        </div>
+
+        <div class="option-six-end">
+        <h1>You go back to the cameras to find the little-girl nowhere to be seen.
+            You're too scared to leave the building again so you stay inside the rest of your shift. 
+            Your boss fires you because you did not patrol. Womp, womp.
+        </h1>
+        <button class="game-over-button-four">GAME OVER</button>
+        </div>
+    </body>
+</html>
